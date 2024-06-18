@@ -54,17 +54,6 @@ userSchema.statics.build = (attrs: UserAttrs) =>{
 
 const User = mongoose.model<UserDoc, UserModel>('User',userSchema);
 
-/* const user = User.build({
-    email: 'annen',
-    password: 'net',
-}); */
-
-/* 
-const buildUser = (attrs: UserAttrs )=>{
-    return new User(attrs); //user typeları ile göndermek için bu fonksiyonu kullanıyoruz böylece type hatası alabiliriz.
-    ****burası userSchema.statics.build de yapılıyor. bu örnekte sürekli dışarı export etmek zorunda kaldığımız için
-    yorucu bir çözüm olacaktı mongoose bunun yerine statics.build fonksiyonunu sunuyor 
-}; */
 
 
 export {User};
