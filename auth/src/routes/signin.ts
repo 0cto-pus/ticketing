@@ -32,7 +32,7 @@ router.post(
     if (!passwordsMatch) {
       throw new BadRequestError("Invalid credentials");
     }
-    //generate JWT
+
     const userJwt = jwt.sign(
       {
         id: existingUser.id,
@@ -41,7 +41,7 @@ router.post(
       process.env.JWT_KEY!
     );
 
-    //store it on session object
+
     req.session = {
       jwt: userJwt,
     };
