@@ -37,7 +37,6 @@ router.post(
       process.env.JWT_KEY!
     );
 
-    //store it on session object
     req.session = {
       jwt: userJwt,
     };
